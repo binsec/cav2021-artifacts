@@ -26,7 +26,7 @@ Important parts of the code:
 The code which drives SE is in binsec/src/sse/sse.ml
 * path merging for RSE+ in function do_directive, match branch for reach
 * path merging for RSE∀+ in function ite and go
-* 
+
 The code which adds a universal quantifier is in binsec/src/formula/formula_transformation.ml in function to_universal
 
 We also provide ways to reproduce a secondary claim: in table 1, we claim that
