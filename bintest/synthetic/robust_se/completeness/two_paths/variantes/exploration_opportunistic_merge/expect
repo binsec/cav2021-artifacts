@@ -1,0 +1,6 @@
+CHECK: [sse:result] Model
+CHECK:              --- Empty model ---
+CHECK:              exploration was complete false
+
+META: { "ignore": true }
+

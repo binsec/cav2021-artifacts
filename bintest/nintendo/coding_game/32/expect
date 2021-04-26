@@ -1,0 +1,12 @@
+CHECK: [sse:result] Model
+apparently many answers are valid, and enumerating them all with z3 is too time consuming... Here are a few
+CHECK: input_{{[0-9!]*}} : {0x{{16b943e6e771cd8c|1a729e3e98b898fc|1c8626f8b78c95ff|1444c11cf996534e|5ae50f9839dc7363|b78c95ff1c8626f8|187881e8855d7ae9|ba5e89081de5e215|12345678deadbeef}}; 64}
+
+
+
+To check a value:
+gdb a.out
+start
+set var *(long long*)(0x0804c018) = 0x12345678deadbeefLL
+c
+check that the process exits with return code 1

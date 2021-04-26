@@ -1,0 +1,10 @@
+controlled input<240>;
+@[0x0804a060, 30] := input<240>;
+# .bss
+@[0x0804a044, 16] := 0<128>;
+@[0x08048780, 14] from_file;
+esp<32> := [0xfff00000, 0xfffff000]u;
+ebp<32> := esp<32> + 128<32>;
+
+# gs is allocated as a rw mmap between ld.so and libc
+gs_base<32> := [0xf7f00000, 0xf7ff0000]u;

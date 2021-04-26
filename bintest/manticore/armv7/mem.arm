@@ -1,0 +1,6 @@
+sp<32> := [0xbea00000, 0xbeaf0000]u;
+buf<32> := [0xbec00000, 0xbecf0000]u;
+r0<32> := buf<32>;
+controlled input<96>;
+@[buf<32>, 12] := input<96>;
+@[sp<32> + 4<32>, 4] := r0<32>; # buf[]

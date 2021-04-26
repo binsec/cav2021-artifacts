@@ -1,0 +1,10 @@
+# confusion
+@[0x080f3140, 4096] from_file;
+# diffusion
+@[0x080f30c0, 1024] from_file;
+# target
+@[0x080f3080, 128] from_file;
+# input
+@[0x080f30a0, 256] := input<2048>;
+esp<32> := 0x00005000;
+#edi<32> := 0x00000000;

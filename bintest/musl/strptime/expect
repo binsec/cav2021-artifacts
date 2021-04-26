@@ -1,0 +1,2 @@
+CHECK: [sse:result] Model
+CHECK: input_{{[0-9]*}} : {0x0000000031343a3031323130322b2f32312f3132; 160}

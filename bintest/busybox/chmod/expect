@@ -1,0 +1,4 @@
+what is expected is a string which makes a mode of 0766 from 0666
+CHECK: [sse:result] Model
+we look for the string u+x
+CHECK: input_{{[0-9]*}} : {0x{{....}}00782b75; 48}

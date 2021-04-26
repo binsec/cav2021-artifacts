@@ -1,0 +1,1 @@
+finds x such that strtol(input, NULL, 10) = 42

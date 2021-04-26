@@ -1,0 +1,5 @@
+esp<32> := [0xfff00000, 0xfffff000]u;
+ebp<32> := esp<32> + 128<32>;
+#controlled input<32>;
+@[0x0804c010, 4] := input<32>;
+

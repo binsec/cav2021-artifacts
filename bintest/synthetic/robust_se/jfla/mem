@@ -1,0 +1,5 @@
+esp<32> := [0xffff0000, 0xffffff00]u;
+
+controlled input<160>;
+@[0x0804c010, 20] := input<160>;
+

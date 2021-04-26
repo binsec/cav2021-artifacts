@@ -1,0 +1,7 @@
+controlled a<32>;
+controlled b<32>;
+@[0x0804c014, 4] := b<32>;
+@[0x0804c060, 4] := a<32>;
+DF<1> := 1<1>;
+esp<32> := [0xfff00000, 0xffffffff]u;
+

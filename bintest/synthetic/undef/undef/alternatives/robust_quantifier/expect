@@ -1,0 +1,2 @@
+CHECK-NOT: [sse:result] Model
+CHECK: {{\[sse:result\] Goal unreachable.|\[sse:warning\] Empty path worklist but search was incomplete. Halting ...}}

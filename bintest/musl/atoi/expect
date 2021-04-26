@@ -1,0 +1,5 @@
+ensure we don't catch a warning "universal query failed, but existential is SAT"
+CHECK: [sse:result] Model
+CHECK: input{{.*}}003234
+CHECK: empty memory
+CHECK-NOT: sse:warning

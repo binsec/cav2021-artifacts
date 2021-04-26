@@ -1,0 +1,1 @@
+../../analyze_one.sh

@@ -1,0 +1,55 @@
+# nix is faster once all deps are built
+# only run docker if nix passes
+stages:
+  - nix
+  - docker
+
+ocaml4.07:
+  tags:
+    - docker
+  stage: docker
+  image: ocaml/opam2:ubuntu-lts
+  except:
+    refs:
+      - /^feature\/se\/.*/
+  script: >
+    true
+    && sudo apt-get update
+    && sudo apt-get install -y cmake libgmp-dev llvm-dev python2.7 pkg-config build-essential m4 libzmq3-dev libprotobuf-dev protobuf-compiler autoconf
+    && opam switch 4.07
+    && opam pin llvm 6.0.0
+    && opam pin .
+    && opam install binsec -y
+    && opam exec -- binsec -version
+
+# yaelle's machine
+ocaml4.05:
+  tags:
+    - docker
+  image: ocaml/opam2:ubuntu-16.04
+  except:
+    refs:
+      - /^feature\/se\/.*/
+  stage: docker
+  script: >
+    true
+    && sudo apt-get update
+    && sudo apt-get install -y cmake libgmp-dev llvm-dev python2.7 pkg-config build-essential m4 libzmq3-dev libprotobuf-dev protobuf-compiler autoconf
+    && opam switch 4.05
+    && opam pin llvm 3.8
+    && opam pin .
+    && opam install binsec -y
+    && opam exec -- binsec -version
+
+appimage:
+  tags:
+    - nix
+  stage: nix
+  # the version of nix on the CI is too old so we use a revision of NixOS 20.03
+  # as of 2020-07-22 to fetch a newer version of nix
+  script:
+    - nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/9ea61f7bc4454734ffbff73c9b6173420fe3147b.tar.gz -p nix --run "nix-build --cores 6 nix/pkgs.nix -A binsec_appimage"
+  artifacts:
+    paths:
+      - result/binsec-x86_64.AppImage
+

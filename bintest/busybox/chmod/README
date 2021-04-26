@@ -1,0 +1,2 @@
+Solves for the argument $x such that busybox's chmod $x turns a file with mode 0666 to 0766
+Answer: u+x

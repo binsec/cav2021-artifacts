@@ -1,0 +1,27 @@
+S .
+S ext
+S ext/framac_ival
+S basis
+S lattices
+S domains
+S domains/constraints
+S term
+S utils
+S smtbackend
+S graph
+S constraints
+
+B .
+B ext
+B ext/framac_ival
+B basis
+B lattices
+B domains
+B domains/constraints
+B term
+B utils
+B smtbackend
+B graph
+B constraints
+
+PKG zarith cudd ocamlgraph apron elina llvm

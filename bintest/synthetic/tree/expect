@@ -1,0 +1,4 @@
+CHECK: [sse:result] Model
+CHECK: --- Model ---
+CHECK-NEXT: # Variables
+CHECK-NEXT: eax_{{[0-9]+}} : {0x00000004; 32}

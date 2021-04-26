@@ -1,0 +1,5 @@
+build:
+  tags:
+    - nix
+  script:
+    - nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/9ea61f7bc4454734ffbff73c9b6173420fe3147b.tar.gz shell.nix --run make

@@ -1,0 +1,2 @@
+attempts to find x such that base64(x) == "b3VpCg=="
+This uses openssl's implementation of base64, patched to replace a malloc'ed buffer by a user provided one. (Binsec does not support malloc)

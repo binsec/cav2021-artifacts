@@ -1,0 +1,3 @@
+CHECK: [sse:result] Model
+bunny_sl0pe@flare-on.com
+CHECK: input_{{[0-9]*}} : {0x006d6f632e6e6f2d6572616c66406570306c735f796e6e7562; 200}

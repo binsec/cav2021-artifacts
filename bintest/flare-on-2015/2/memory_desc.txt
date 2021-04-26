@@ -1,0 +1,16 @@
+# https://stackoverflow.com/questions/41090297/default-state-of-direction-flag-df-during-x86-program-execution
+DF<1> := 0<1>;
+
+esp<32> := [0xffff0000, 0xffffff00]u;
+ebp<32>:= esp<32> + 16<32>;
+@[ebp<32>, 4] := 0x0018ff94;
+controlled length<32>;
+# prevent absurdly long length
+length<32> := length<32> & 1023<32>;
+@[ebp<32> - 4<32>, 4] := length<32>;
+@[esp<32>, 4] := 0x004010e4;
+
+@[0x004010e4, 125] from_file;
+
+controlled input<296>;
+@[0x00402159, 37] := input<296>;

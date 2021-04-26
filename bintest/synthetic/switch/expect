@@ -1,0 +1,2 @@
+ CHECK: [sse:result] Model
+ CHECK: input_{{[0-9]}} : {0x00000008; 32}

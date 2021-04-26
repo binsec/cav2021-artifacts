@@ -1,0 +1,10 @@
+# __default_guardsize:
+@[0x0804c020, 4] from_file;
+#b :
+@[0x0804c15c, 8] from_file;
+#solution
+@[0x0804c010, 8] from_file;
+#a (input):
+controlled input<64>;
+@[0x0804c018, 8] := input<64>;
+esp<32> := [0xffff0000, 0xffffFF00]u;

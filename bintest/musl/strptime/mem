@@ -1,0 +1,10 @@
+#format string
+@[0x08049c00, 15] from_file;
+#switch
+@[0x08049c2c, 384] from_file;
+
+controlled input<160>;
+@[0x0804c004, 20] := input<160>;
+
+esp<32> := [0xfff00000, 0xfffff000]u;
+ebp<32> := esp<32> + 128<32>;

@@ -1,0 +1,4 @@
+CHECK-NOT: [sse:result] Model
+
+META: { "ignore": true }
+

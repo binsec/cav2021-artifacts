@@ -1,0 +1,5 @@
+CHECK: [sse:warning] Empty path worklist but search was incomplete. Halting ...
+CHECK:              exploration was complete false
+
+META: { "ignore": true }
+

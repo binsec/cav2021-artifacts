@@ -1,0 +1,17 @@
+esp<32> := [0xfff00000, 0xfffff000]u;
+ebp<32> := esp<32> + 128<32>;
+# obj.goal
+@[0x0826f024, 4] from_file;
+# "oui\n"
+# strlen reads beyond the null byte,
+# so for robust se we need to load it
+# from file
+@[0x08197000, 5] from_file;
+# obj.input
+@[0x0826f028, 4] from_file;
+# data_ascii2bin
+@[0x08197700, 128] from_file;
+# answer
+controlled input<80>;
+@[0x08197005, 10] := input<80>;
+

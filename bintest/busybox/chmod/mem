@@ -1,0 +1,18 @@
+esp<32>:= [0xffff0000, 0xffffff00]u;
+# str.augo
+@[0x08049730, 5] from_file;
+# obj.{who,perm}_mask
+@[0x08049720, 16] from_file;
+@[0x08049708, 24] from_file;
+# obj.{who,perm}_chars
+@[0x08049730, 5] from_file;
+@[0x08049700, 7] from_file;
+# obj.table
+@[0x08049760, 257] from_file;
+# str.rwxXst
+@[0x08049700, 7] from_file;
+# entre who_chars et table
+@[0x08049735, 44] from_file;
+
+controlled input<48>;
+@[0x0804b004, 6] := input<48>;

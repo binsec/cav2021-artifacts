@@ -1,0 +1,1 @@
+this is a test to check that tests of the form esp = 0 are simplified and not tainted

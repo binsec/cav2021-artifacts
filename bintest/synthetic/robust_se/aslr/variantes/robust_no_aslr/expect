@@ -1,0 +1,8 @@
+CHECK: [sse:result] Model
+CHECK: packet_{{[0-9]*}} : {0x{{......f6faff87}}; 56}
+
+the actual good value of packet is: the four first bytes are len such that
+buf + len + 1 + 0x18 = esp
+
+$  qalc 0x8050060 + 0xf6faff87 + 0x18 + 1 to hex
+134545504 + 4143644551 + 24 + 1 = 0xFF000000

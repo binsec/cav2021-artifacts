@@ -1,0 +1,4 @@
+controlled ebx<32>;
+controlled argc<32>;
+@[esp<32>+ 4<32>, 4] := argc<32>;
+

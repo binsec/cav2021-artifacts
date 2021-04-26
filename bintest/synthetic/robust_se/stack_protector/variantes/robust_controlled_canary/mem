@@ -1,0 +1,8 @@
+DF<1> := 0<1>;
+controlled input<5>;
+@[0x0804c010, 4] := extu input<5> 32;
+esp<32> := [0xfff00000, 0xffffff00]u;
+gs_base<32> := [0xf7f00000, 0xf7fff000]u;
+
+controlled canary<32>;
+@[gs_base<32>+20<32>, 4] := canary<32>;

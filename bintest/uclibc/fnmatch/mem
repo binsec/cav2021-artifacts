@@ -1,0 +1,22 @@
+esp<32>:= [0xffff0000, 0xffffff00]u;
+#format string
+@[0x08048ec0, 14] from_file;
+
+controlled input<80>;
+@[0x0804b014, 10] := input<80>;
+
+#for musl ...
+## obj.__fsmu8
+#@[0x0804b300, 274] from_file;
+## obj.casemaps
+#@[0x0804a660, 248] from_file;
+## obj.pairs
+#@[0x0804a460, 488] from_file;
+## obj.table_1
+#@[0x0804a760, 2976] from_file;
+## hack @ 0x08049304
+## see (musl)/src/internal/locale_impl.h
+## we set CURRENT_UTF8
+##@[0x00000000, 4] := 0<32>;
+##@[0x0000009c, 4] := 0x000000f0;
+##@[0x000000f0, 4] := 1<32>;

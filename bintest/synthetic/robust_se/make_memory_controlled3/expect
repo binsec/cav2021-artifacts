@@ -1,0 +1,5 @@
+CHECK-NOT: [sse:result] Model
+CHECK:  unknown        0
+
+here we check that -fml-unquantify-memory can answer UNSAT
+

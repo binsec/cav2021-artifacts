@@ -1,0 +1,2 @@
+finds a string that matches c*l
+Seems easy, but solvers get absolutely crazy with backspaces (\b) and find complex solutions

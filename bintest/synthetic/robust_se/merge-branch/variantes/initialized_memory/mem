@@ -1,0 +1,7 @@
+esp<32> := [0xff000000, 0xffff0000]u;
+esp<32> := esp<32> & 0xffffff00;
+
+controlled input<32>;
+@[0x0804c040, 4] := input<32>;
+
+@[esp<32> - 450<32>, 10] := uncontrolled<80>;

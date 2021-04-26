@@ -1,0 +1,7 @@
+CHECK: [sse:result] Model
+CHECK:              argc_{{[0-9]*}} : {0x00000000; 32}
+CHECK:              ebx_{{[0-9]*}} : {0x0000002a; 32}
+CHECK:              exploration was complete false
+
+META: { "ignore": true }
+

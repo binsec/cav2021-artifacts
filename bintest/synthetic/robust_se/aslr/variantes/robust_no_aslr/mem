@@ -1,0 +1,8 @@
+esp<32> := 0xff000000;
+
+# packet
+controlled packet<56>;
+@[0x08050060, 7] := packet<56>;
+# len
+controlled len<8>;
+@[0x08050040, 4] := extu len<8> 32;

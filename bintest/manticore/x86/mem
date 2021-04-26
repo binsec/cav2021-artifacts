@@ -1,0 +1,5 @@
+esp<32> := [0xf0006000 .. 0xf0008000]u;
+esp<32> := esp<32> & 0xffffff00;
+controlled input<96>;
+@[esp<32> - 28<32>, 12] := input<96>;
+@[0x0804a040, 4] from_file;

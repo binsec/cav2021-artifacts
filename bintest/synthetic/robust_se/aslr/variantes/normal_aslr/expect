@@ -1,0 +1,7 @@
+CHECK: [sse:result] Model
+CHECK: packet_{{[0-9]*}} : {0x{{......f[67]......}}; 56}
+
+the actual good value of packet is: the four first bytes are len such that
+0x8050040 + len ~= esp
+
+since esp is variable, we only match the first byte.

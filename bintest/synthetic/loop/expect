@@ -1,0 +1,11 @@
+in this test we check that simplifications help unroll trivial loops
+
+CHECK: [sse:result] Model
+CHECK: input_{{.}} : {0x00000008; 32}
+CHECK: [sse:info] SMT queries
+no need to prove that going further in the loop is ok
+CHECK:              sat            2
+no need to prove that we don't go out of the loop
+CHECK:              unsat          0
+CHECK:              unknown        0
+CHECK:              total          2

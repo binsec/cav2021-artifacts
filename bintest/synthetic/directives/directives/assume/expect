@@ -1,0 +1,4 @@
+CHECK: [sse:result] Model @ 0x080490c2(main+0x72)
+CHECK:              --- Model ---
+CHECK:              # Variables
+CHECK:              choice_{{.}} : {0x00000003; 32}

@@ -1,0 +1,5 @@
+controlled a<32>;
+controlled b<32>;
+eax<32> := b<32>;
+edx<32> := a<32>;
+

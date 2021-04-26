@@ -1,0 +1,14 @@
+two ways to reach the goal: negative input and non-negative input
+CHECK-DAG: [sse:result] Model
+CHECK-DAG:              choice_{{.}} : {0x{{[89a-f].......}}; 32}
+CHECK-DAG:              -- empty memory --
+CHECK-DAG: [sse:result] Model
+CHECK-DAG:              choice_{{.}} : {0x{{[0-7].......}}; 32}
+CHECK-DAG:              -- empty memory --
+assert that we did not explore more than these two paths
+regression test for [61aa1d493] [sse] also execute directive when we pick a new path on the same vaddr
+CHECK: [sse:info] SMT queries
+4 is a regression from robust merge, no idea why sorry
+CHECK-NEXT:              sat            {{2|4|6}}
+CHECK-NEXT:              unsat          0
+CHECK-NEXT:              unknown        0

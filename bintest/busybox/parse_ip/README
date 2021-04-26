@@ -1,0 +1,4 @@
+this tests exercises busybox's routine to parse ip addresses.
+We ask for a string which parses to 
+0x12345678
+Answer: 120.86.52.18

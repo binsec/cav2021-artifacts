@@ -1,0 +1,3 @@
+CHECK: [sse:result] Model
+CHECK-NOT: Empty model
+CHECK: undef_OF{{.*}} : {0x0; 1}

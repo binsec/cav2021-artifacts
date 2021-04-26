@@ -1,0 +1,3 @@
+@[0x00402140, 24] from_file;
+controlled input<200>;
+@[0x00402158, 25] := input<200>;

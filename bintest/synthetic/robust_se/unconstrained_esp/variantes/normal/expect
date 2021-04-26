@@ -1,0 +1,4 @@
+CHECK: [sse:result] Model
+CHECK:              esp_{{[0-9]*}} : {0x0804c060; 32}
+CHECK:              input_{{[0-9]*}} : {0x0000002a; 32}
+

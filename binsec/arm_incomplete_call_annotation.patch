@@ -1,0 +1,13 @@
+diff --git a/unisim_lib/unisim/util/symbolic/binsec/binsec.cc b/unisim_lib/unisim/util/symbolic/binsec/binsec.cc
+index 52f41ec55..941d8a660 100644
+--- a/unisim_lib/unisim/util/symbolic/binsec/binsec.cc
++++ b/unisim_lib/unisim/util/symbolic/binsec/binsec.cc
+@@ -776,7 +776,7 @@ namespace binsec {
+ 
+         std::ostringstream buffer;
+         buffer << "goto (" << GetCode(nia, this->vars, current) << (nia->AsConstNode() ? ",0" : "") << ")";
+-        if (bt == Branch::Call) buffer << " // call";
++        /* if (bt == Branch::Call) buffer << " // call"; */
+         current.write( buffer.str() );
+       }
+ 

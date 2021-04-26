@@ -1,0 +1,3 @@
+esp<32> := [ 0xfff00000, 0xffffffff ]u;
+@[0x0804c040, 4] := choice<32>;
+

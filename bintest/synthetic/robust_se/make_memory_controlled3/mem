@@ -1,0 +1,8 @@
+esp<32> := [0xfff00000, 0xffffffff]u;
+# table
+@[0x0804c010, 48] from_file;
+
+#@[esp<32>+4<32>, 4] := argc<32>;
+controlled y<32>;
+@[esp<32>+8<32>, 4] := y<32>;
+

@@ -1,0 +1,5 @@
+controlled input<8>;
+@[0x0804c010, 1] := input<8>;
+esp<32> := [0xfff00000, 0xffffffff]u;
+# minuscule majuscule
+@[0x0804a000, 54] from_file;

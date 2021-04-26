@@ -1,0 +1,2 @@
+finds a date such that strptime(date, "%d/%m/%Y %H:%M") = 21/12/2012 10:41
+Compiled with musl

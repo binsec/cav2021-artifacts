@@ -1,0 +1,4 @@
+controlled a<32>;
+@[0x0804c040, 4] := a<32>;
+esp<32> := [0xfff00000, 0xffffffff]u;
+

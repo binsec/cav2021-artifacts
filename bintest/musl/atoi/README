@@ -1,0 +1,2 @@
+find x such that atoi(x) = 42
+the executable is compiled with musl
