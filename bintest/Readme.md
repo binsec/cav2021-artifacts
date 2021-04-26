@@ -85,11 +85,13 @@ To summarize the results you obtained, run `./dump.py`. Slowdown measurements ar
 there.
 This should print a lot of text, including the equivalent of table 4 for the
 shorter timeout of 120s we advised above:
+```
                      SE  BMC  RSE∀  RSE∀+  RSE  RSE+  RBMC
 Correct              27   21    28     32   34    40    31
 False positive       16   14     0      0    0     0     0
 Inconclusive          0    0    14     10    6     0     1
 Resource exhaustion   3   11     4      4    6     6    14
+```
 
 This table should allow you to verify RQ1, RQ2, and part of RQ3. Performance
 aspects (in RQ3 and RQ4) can be checked with the rest of the output. For example,
